@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Auriculares Gamer RGB - Poder en tu juego, estilo en tu mundo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Orbitron (futurista) + Noto Sans SC (oriental) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Orbitron", "Noto Sans SC", sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .oriental {
+        font-family: "Noto Sans SC", "Orbitron", sans-serif;
+        letter-spacing: 0.05em;
+      }
+      .neon-btn {
+        background: linear-gradient(90deg, #ff0033 0%, #ffd700 100%);
+        color: #fff;
+        box-shadow: 0 0 12px 2px #ff0033, 0 0 24px 4px #ffd700;
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: none;
+      }
+      .neon-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 24px 6px #ffd700, 0 0 32px 8px #ff0033;
+        filter: brightness(1.2);
+      }
+      /* Partículas fondo */
+      #particles-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+      }
+      /* Animaciones suaves */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeInUp 1s forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Scrollbar personalizada */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #1a1a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff0033 0%, #ffd700 100%);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="relative overflow-x-hidden">
+    <!-- Partículas de fondo -->
+    <canvas id="particles-bg"></canvas>
+
+    <!-- Hero Section -->
+    <section
+      class="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 min-h-[90vh]"
+    >
+      <div class="flex-1 text-center md:text-left fade-in-up">
+        <h1
+          class="text-4xl md:text-6xl font-extrabold text-red-600 drop-shadow-lg oriental mb-4"
+        >
+          Poder en tu juego,<br />
+          <span class="text-yellow-400">estilo en tu mundo</span>
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-200 mb-8">
+          Auriculares Bluetooth Gamer RGB – Vive la experiencia definitiva.
+        </p>
+        <button
+          class="neon-btn px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:scale-105 transition-all"
+          onclick="scrollToSection('oferta')"
+        >
+          Compra Ahora
+        </button>
+      </div>
+      <div
+        class="flex-1 flex justify-center items-center mt-10 md:mt-0 fade-in-up"
+        style="animation-delay: 0.3s"
+      >
+        <!-- Imagen ilustrativa (puedes reemplazar el src por una imagen propia) -->
+        <img
+          src="https://cdn.pixabay.com/photo/2017/01/10/19/05/headphones-1970171_1280.png"
+          alt="Auriculares Gamer RGB"
+          class="w-80 md:w-[28rem] drop-shadow-2xl rounded-3xl border-4 border-yellow-400 bg-black/60"
+          style="box-shadow: 0 0 40px 10px #ff0033, 0 0 80px 20px #ffd700"
+        />
+        <!-- Simulación de luces RGB -->
+        <div
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        >
+          <div
+            class="w-72 h-72 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-red-600 via-yellow-400 to-fuchsia-500 animate-pulse"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios clave -->
+    <section
+      class="relative z-10 py-12 px-4 md:px-20 bg-black/80 fade-in-up"
+      style="animation-delay: 0.5s"
+    >
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-10 oriental"
+      >
+        ¿Por qué elegirlos?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div
+          class="bg-gradient-to-b from-red-900 via-black to-yellow-900 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all"
+        >
+          <img
+            src="https://img.icons8.com/color/96/000000/surround-sound.png"
+            alt="Sonido 3D"
+            class="mx-auto mb-4"
+          />
+          <h3 class="text-xl font-bold text-red-400 mb-2">
+            Sonido envolvente 3D
+          </h3>
+          <p class="text-gray-200">
+            Siente cada detalle y sumérgete en tus juegos favoritos.
+          </p>
+        </div>
+        <div
+          class="bg-gradient-to-b from-yellow-900 via-black to-red-900 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all"
+        >
+          <img
+            src="https://img.icons8.com/color/96/000000/battery--v2.png"
+            alt="Batería"
+            class="mx-auto mb-4"
+          />
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">
+            Batería de larga duración
+          </h3>
+          <p class="text-gray-200">
+            Hasta 30 horas de juego sin interrupciones.
+          </p>
+        </div>
+        <div
+          class="bg-gradient-to-b from-red-900 via-black to-yellow-900 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all"
+        >
+          <img
+            src="https://img.icons8.com/color/96/000000/bluetooth.png"
+            alt="Bluetooth"
+            class="mx-auto mb-4"
+          />
+          <h3 class="text-xl font-bold text-blue-400 mb-2">Bluetooth 5.0</h3>
+          <p class="text-gray-200">Conexión ultra estable y sin retrasos.</p>
+        </div>
+        <div
+          class="bg-gradient-to-b from-yellow-900 via-black to-red-900 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-all"
+        >
+          <img
+            src="https://img.icons8.com/color/96/000000/led.png"
+            alt="Luces LED"
+            class="mx-auto mb-4"
+          />
+          <h3 class="text-xl font-bold text-fuchsia-400 mb-2">Luces LED RGB</h3>
+          <p class="text-gray-200">
+            Personaliza tu estilo gamer con efectos brillantes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prueba social -->
+    <section
+      class="relative z-10 py-12 px-4 md:px-20 fade-in-up"
+      style="animation-delay: 0.7s"
+    >
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-red-500 mb-8 oriental"
+      >
+        Lo que dicen otros gamers
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-black/80 rounded-2xl p-6 shadow-lg border border-yellow-700"
+        >
+          <div class="flex items-center mb-2">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Testimonio"
+              class="w-12 h-12 rounded-full border-2 border-red-500 mr-3"
+            />
+            <span class="font-bold text-yellow-400">AlexGamer17</span>
+          </div>
+          <p class="text-gray-200 mb-2">
+            “El sonido es brutal y las luces RGB quedan épicas en mi setup.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div
+          class="bg-black/80 rounded-2xl p-6 shadow-lg border border-red-700"
+        >
+          <div class="flex items-center mb-2">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Testimonio"
+              class="w-12 h-12 rounded-full border-2 border-yellow-400 mr-3"
+            />
+            <span class="font-bold text-red-400">LinaPro</span>
+          </div>
+          <p class="text-gray-200 mb-2">
+            “No se desconectan nunca y la batería dura muchísimo.
+            ¡Recomendados!”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div
+          class="bg-black/80 rounded-2xl p-6 shadow-lg border border-yellow-700"
+        >
+          <div class="flex items-center mb-2">
+            <img
+              src="https://randomuser.me/api/portraits/men/65.jpg"
+              alt="Testimonio"
+              class="w-12 h-12 rounded-full border-2 border-fuchsia-400 mr-3"
+            />
+            <span class="font-bold text-fuchsia-400">DragonX</span>
+          </div>
+          <p class="text-gray-200 mb-2">
+            “Mejor que los de marcas caras. El diseño gamer es 🔥.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oferta especial limitada -->
+    <section
+      id="oferta"
+      class="relative z-10 py-12 px-4 md:px-20 bg-gradient-to-r from-red-900 via-black to-yellow-900 fade-in-up"
+      style="animation-delay: 0.9s"
+    >
+      <div class="max-w-3xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-yellow-400 mb-4 oriental"
+        >
+          ¡Oferta especial limitada!
+        </h2>
+        <p class="text-lg text-gray-200 mb-6">
+          Solo por hoy:
+          <span class="text-red-400 font-bold text-2xl">30% de descuento</span>
+          en tu compra.
+        </p>
+        <div class="flex flex-col items-center mb-6">
+          <span class="text-gray-300 mb-2">Tiempo restante:</span>
+          <div
+            id="timer"
+            class="text-3xl font-bold text-red-500 bg-black/70 px-6 py-2 rounded-xl inline-block tracking-widest"
+          ></div>
+        </div>
+        <button
+          class="neon-btn px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:scale-105 transition-all"
+          onclick="scrollToSection('footer')"
+        >
+          Aprovecha el Descuento
+        </button>
+      </div>
+    </section>
+
+    <!-- Sección comparativa -->
+    <section
+      class="relative z-10 py-12 px-4 md:px-20 fade-in-up"
+      style="animation-delay: 1.1s"
+    >
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-red-500 mb-8 oriental"
+      >
+        ¿En qué superan a los auriculares comunes?
+      </h2>
+      <div class="overflow-x-auto">
+        <table
+          class="min-w-full text-center border-collapse bg-black/80 rounded-2xl shadow-lg"
+        >
+          <thead>
+            <tr class="bg-gradient-to-r from-red-700 to-yellow-600 text-white">
+              <th class="py-3 px-4">Característica</th>
+              <th class="py-3 px-4">Auriculares Gamer RGB</th>
+              <th class="py-3 px-4">Auriculares Comunes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-yellow-700">
+              <td class="py-3 px-4">Sonido 3D envolvente</td>
+              <td class="text-green-400 font-bold">✔️</td>
+              <td class="text-red-400 font-bold">✖️</td>
+            </tr>
+            <tr class="border-b border-yellow-700">
+              <td class="py-3 px-4">Luces LED RGB</td>
+              <td class="text-green-400 font-bold">✔️</td>
+              <td class="text-red-400 font-bold">✖️</td>
+            </tr>
+            <tr class="border-b border-yellow-700">
+              <td class="py-3 px-4">Bluetooth 5.0</td>
+              <td class="text-green-400 font-bold">✔️</td>
+              <td class="text-yellow-400 font-bold">✔️/✖️</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4">Batería 30h+</td>
+              <td class="text-green-400 font-bold">✔️</td>
+              <td class="text-yellow-400 font-bold">✔️/✖️</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Garantía + seguridad -->
+    <section
+      class="relative z-10 py-8 px-4 md:px-20 fade-in-up"
+      style="animation-delay: 1.3s"
+    >
+      <div
+        class="max-w-2xl mx-auto bg-black/80 rounded-2xl p-8 text-center border-2 border-yellow-400 shadow-lg"
+      >
+        <h3 class="text-2xl font-bold text-yellow-400 mb-2 oriental">
+          ¡Compra sin riesgos!
+        </h3>
+        <p class="text-gray-200 text-lg">
+          Tienes <span class="text-red-400 font-bold">30 días de prueba</span> o
+          te devolvemos tu dinero. Garantía total.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer con contacto y suscripción -->
+    <footer
+      id="footer"
+      class="relative z-10 py-10 px-4 md:px-20 bg-gradient-to-r from-black via-red-900 to-black mt-8"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="mb-6 md:mb-0">
+          <h4 class="text-xl font-bold text-yellow-400 mb-2 oriental">
+            Contáctanos
+          </h4>
+          <div class="flex gap-4 text-2xl">
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              class="hover:text-green-400 transition"
+              ><img
+                src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+                alt="WhatsApp"
+                class="inline w-8"
+            /></a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              class="hover:text-pink-400 transition"
+              ><img
+                src="https://img.icons8.com/color/48/000000/instagram-new.png"
+                alt="Instagram"
+                class="inline w-8"
+            /></a>
+            <a
+              href="https://tiktok.com/"
+              target="_blank"
+              class="hover:text-fuchsia-400 transition"
+              ><img
+                src="https://img.icons8.com/color/48/000000/tiktok--v1.png"
+                alt="TikTok"
+                class="inline w-8"
+            /></a>
+          </div>
+        </div>
+        <form
+          class="flex flex-col md:flex-row items-center gap-4"
+          onsubmit="event.preventDefault();alert('¡Gracias por suscribirte!');"
+        >
+          <input
+            type="email"
+            required
+            placeholder="Tu email gamer"
+            class="px-4 py-2 rounded-full bg-black/70 border-2 border-yellow-400 text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition w-64"
+          />
+          <button
+            type="submit"
+            class="neon-btn px-6 py-2 rounded-full font-bold"
+          >
+            Suscribirme
+          </button>
+        </form>
+      </div>
+      <div class="text-center text-gray-400 mt-8 text-sm">
+        &copy; 2025 Auriculares Gamer RGB. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Animaciones y JS -->
+    <script>
+      // Animación de partículas (estrellas/luces)
+      const canvas = document.getElementById("particles-bg");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+      function createParticles() {
+        particles = [];
+        for (let i = 0; i < 80; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 2 + 1,
+            dx: (Math.random() - 0.5) * 0.3,
+            dy: (Math.random() - 0.5) * 0.3,
+            color: ["#ffd700", "#ff0033", "#fff", "#f0f", "#0ff"][
+              Math.floor(Math.random() * 5)
+            ],
+          });
+        }
+      }
+      createParticles();
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let p of particles) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+          ctx.fillStyle = p.color;
+          ctx.shadowColor = p.color;
+          ctx.shadowBlur = 12;
+          ctx.fill();
+          p.x += p.dx;
+          p.y += p.dy;
+          if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        }
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+      window.addEventListener("resize", createParticles);
+
+      // Temporizador oferta especial (cuenta regresiva 24h)
+      function startTimer(duration, display) {
+        let timer = duration,
+          hours,
+          minutes,
+          seconds;
+        setInterval(function () {
+          hours = parseInt(timer / 3600, 10);
+          minutes = parseInt((timer % 3600) / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+          hours = hours < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          display.textContent = hours + ":" + minutes + ":" + seconds;
+          if (--timer < 0) {
+            timer = 0;
+            display.textContent = "00:00:00";
+          }
+        }, 1000);
+      }
+      window.onload = function () {
+        // 24 horas en segundos
+        let duration = 60 * 60 * 24;
+        let display = document.getElementById("timer");
+        startTimer(duration, display);
+
+        // Animaciones fade-in-up por scroll
+        const fadeEls = document.querySelectorAll(".fade-in-up");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = "running";
+                entry.target.style.opacity = 1;
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        fadeEls.forEach((el) => observer.observe(el));
+      };
+
+      // Scroll suave a secciones
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
